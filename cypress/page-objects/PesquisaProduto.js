@@ -11,9 +11,7 @@ class PesquisaProduto {
   }
 
   produtoinexistente(produto) {
-    cy.get('.a-spacing-top-small')
-      .should('contain', `Nenhum resultado para "${produto}"`);
-  }
-  }
+   cy.contains(`Não há resultados para ${produto}`).should('be.visible');
+   }}
     
 export default new PesquisaProduto();
