@@ -12,14 +12,13 @@ class HomePageAmazon {
   }
 
     validarValorCarrinho(valor) {
-    cy.get('#nav-cart-count').then(($counter) => {
+  cy.get('#nav-cart-count').then(($counter) => {
     const count = $counter.text();
     cy.log(`O contador do carrinho tem o valor: ${count}`);
-    // A asserção deve usar a variável 'valor' passada para a função
-    expect(count).to.include(valor.toString()); 
+    expect(count).to.eq(valor.toString());
   });
-
 }
+
 }
 
 export default new HomePageAmazon();

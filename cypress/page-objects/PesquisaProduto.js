@@ -1,4 +1,3 @@
-import { hasUncaughtExceptionCaptureCallback } from "process";
 
 class PesquisaProduto {
 

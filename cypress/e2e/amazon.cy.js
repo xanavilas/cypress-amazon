@@ -29,7 +29,7 @@ describe('Aceder ao site da amazon', () => {
 
     //validar que o produto foi adicionado ao carrinho 
     HomePageAmazon.validarValorCarrinho(1);
-    PaginaProduto.obterMensagemDeValidação('Adicionado ao carrinho');
+    PaginaProduto.obterMensagemDeValidação();
   
 
     // finalizar a compra
