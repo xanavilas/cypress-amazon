@@ -30,4 +30,4 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           browser: chrome
-          spec: 'cypress/e2e/bertrand.cy.js'
+          spec: 'cypress/e2e/amazon.cy.js'
