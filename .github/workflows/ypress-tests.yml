@@ -15,19 +15,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      # Passo 1: Configurar Node.js (opcional, mas recomendado)
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '18'
 
-      # Passo 2: Instalar as dependências
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      # Passo 3: Executar os testes do Cypress
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          browser: chrome
+          config-file: cypress.config.js
           spec: 'cypress/e2e/amazon.cy.js'
+          # browser: chrome # (opcional, se realmente precisa do Chrome)
