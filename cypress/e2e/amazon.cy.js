@@ -41,8 +41,10 @@ describe('Aceder ao site da amazon', () => {
 
     it('Pesquisar por produto que não existe', () => {
       //fazer pesquisa por produto inexistente
-      PesquisaProduto.pesquisaProduto('123123142534534bnkmfbasdnmfb smnc smadfkjfnsdkf');
-      PesquisaProduto.produtoinexistente('123123142534534bnkmfbasdnmfb smnc smadfkjfnsdkf');
+      const produtoInexistente = '123123142534534bnkmfbasdnmfb smnc smadfkjfnsdkf';
+
+      PesquisaProduto.pesquisaProduto(produtoInexistente);
+      PesquisaProduto.produtoinexistente(produtoInexistente);
     })
 
   });

@@ -11,11 +11,8 @@ class PesquisaProduto {
   }
 
   produtoinexistente(produto) {
-    cy.get('.a-spacing-top-small').then(($mensagem) => {
-        const textMensagem = $mensagem.text();
-        cy.log(`O texto da mensagem é: "${textMensagem}"`);
-        expect(textMensagem).to.contain(`Nenhum resultado para "${produto}"`)
-    })
+    cy.get('.a-spacing-top-small')
+      .should('contain', `Nenhum resultado para "${produto}"`);
   }
   }
     
