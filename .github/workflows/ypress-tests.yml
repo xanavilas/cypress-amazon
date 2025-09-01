@@ -15,6 +15,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      # Passo 1: Configurar Node.js (opcional, mas recomendado)
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18' # Ou a versão que você está a usar
+
+      # Passo 2: Instalar as dependências
+      - name: Install dependencies
+        run: npm install
+
+      # Passo 3: Executar os testes do Cypress
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
