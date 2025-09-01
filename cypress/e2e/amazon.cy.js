@@ -39,5 +39,10 @@ describe('Aceder ao site da amazon', () => {
 
     });
 
+    it('Pesquisar por produto que não existe', () => {
+      //fazer pesquisa por produto inexistente
+      PesquisaProduto.pesquisaProduto('dasdasdafdafsdfsd423423432');
+    })
+
   });
     
