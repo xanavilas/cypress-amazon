@@ -12,7 +12,7 @@ class PesquisaProduto {
   }
 
   produtoinexistente(produto) {
-    cy.get('.a-color-state.a-text-bold').then(($mensagem) => {
+    cy.get('.a-size-medium a-color-base a-text-normal').then(($mensagem) => {
         const textMensagem = $mensagem.text();
         cy.log(`O texto da mensagem é: "${textMensagem}"`);
         expectmensagem.to.contain(`Nenhum resultado para "${produto}"`)
