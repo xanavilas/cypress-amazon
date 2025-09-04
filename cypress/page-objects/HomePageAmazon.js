@@ -1,6 +1,6 @@
 class HomePageAmazon {
     visitar() {
-        cy.visit('https://www.amazon.pt');
+        cy.visit('/');
     }
 
      fecharPopup() {
