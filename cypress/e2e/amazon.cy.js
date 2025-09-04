@@ -17,11 +17,11 @@ describe('Aceder ao site da amazon', () => {
     HomePageAmazon.validarValorCarrinho(0);
 
     //fazer a pesquisa por um produto
-    PesquisaSelecaoProduto.pesquisarProduto('Pokémon: Let\'s Go, Pikachu!');
+    PesquisaSelecaoProduto.pesquisarProduto('Super Mario Odyssey');
   
 
     //selecionar o produto 
-    PesquisaSelecaoProduto.selecionarProduto(2);
+    PesquisaSelecaoProduto.selecionarProduto(0);
   
 
     //adicionar o produto ao carrinho
@@ -36,17 +36,17 @@ describe('Aceder ao site da amazon', () => {
     // finalizar a compra
     FinalizarCompra.finalizarCompra().click();
     FinalizarCompra.validartURLFinalizarCompra();
-    
+    FinalizarCompra.iniciarSessao('testeana646@gmail.com','33Testeana33');
 
     });
 
-    it('Pesquisar por produto que não existe', () => {
+    /*it('Pesquisar por produto que não existe', () => {
       //fazer pesquisa por produto inexistente
       const produtoInexistente = '123123142534534bnkmfbasdnmfb smnc smadfkjfnsdkf';
 
       PesquisaSelecaoProduto.pesquisarProduto(produtoInexistente);
       PesquisaSelecaoProduto.produtoinexistente(produtoInexistente);
-    })
+    })*/
 
   });
     

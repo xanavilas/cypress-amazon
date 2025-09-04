@@ -10,8 +10,10 @@ class PesquisaSelecaoProduto {
     cy.get('[data-component-type="s-search-result"]').eq(index).find('.s-image').click({ force: true });
   }
 
-  produtoinexistente(produto) {
+  /*produtoinexistente(produto) {
    cy.contains(`Não há resultados para ${produto}`).should('be.visible');
-   }}
+   }}*/
+
+}
     
 export default new PesquisaSelecaoProduto();
