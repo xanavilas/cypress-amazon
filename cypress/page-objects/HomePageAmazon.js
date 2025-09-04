@@ -3,13 +3,17 @@ class HomePageAmazon {
         cy.visit('https://www.amazon.pt');
     }
 
-     fecharpopup() {
+     fecharPopup() {
     cy.get('body').then($body => {
       if ($body.find('.a-button-text:contains("Continue shopping")').length) {
         cy.contains('.a-button-text', 'Continue shopping').click();
       }
     });
   }
+
+    recusarCookies() {
+      cy.get('#sp-cc-rejectall-link').click();
+    }
 
     validarValorCarrinho(valor) {
   cy.get('#nav-cart-count').then(($counter) => {

@@ -1,7 +1,7 @@
 
-class PesquisaProduto {
+class PesquisaSelecaoProduto {
 
-  pesquisaProduto(nomeProduto) {
+  pesquisarProduto(nomeProduto) {
     cy.get('#twotabsearchtextbox').type(nomeProduto);
     cy.get('#nav-search-submit-button').click();
   }
@@ -14,4 +14,4 @@ class PesquisaProduto {
    cy.contains(`Não há resultados para ${produto}`).should('be.visible');
    }}
     
-export default new PesquisaProduto();
+export default new PesquisaSelecaoProduto();

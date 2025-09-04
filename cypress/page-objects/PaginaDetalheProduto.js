@@ -1,4 +1,4 @@
-class PaginaProduto {
+class PaginaDetalheProduto {
 
     adicionarAoCarrinho() {
         return cy.get('#add-to-cart-button');
@@ -12,4 +12,4 @@ class PaginaProduto {
 }
 }
 
-export default new PaginaProduto();
+export default new PaginaDetalheProduto();

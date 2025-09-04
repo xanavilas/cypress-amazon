@@ -1,12 +1,13 @@
 import FinalizarCompra from '../page-objects/FinalizarCompra';
 import HomePageAmazon from '../page-objects/HomePageAmazon'
-import PaginaProduto from '../page-objects/PaginaProduto';
-import PesquisaProduto from '../page-objects/PesquisaProduto';
+import PaginaDetalheProduto from '../page-objects/PaginaDetalheProduto';
+import PesquisaSelecaoProduto from '../page-objects/PesquisaSelecaoProduto';
 
 describe('Aceder ao site da amazon', () => {
   beforeEach(() => {
     HomePageAmazon.visitar();
-    HomePageAmazon.fecharpopup();
+    HomePageAmazon.fecharPopup();
+    HomePageAmazon.recusarCookies();
     
    });
 
@@ -16,20 +17,20 @@ describe('Aceder ao site da amazon', () => {
     HomePageAmazon.validarValorCarrinho(0);
 
     //fazer a pesquisa por um produto
-    PesquisaProduto.pesquisaProduto('Pokémon: Let\'s Go, Pikachu!');
+    PesquisaSelecaoProduto.pesquisarProduto('Pokémon: Let\'s Go, Pikachu!');
   
 
     //selecionar o produto 
-    PesquisaProduto.selecionarProduto(1);
+    PesquisaSelecaoProduto.selecionarProduto(2);
   
 
     //adicionar o produto ao carrinho
-    PaginaProduto.adicionarAoCarrinho().click();
+    PaginaDetalheProduto.adicionarAoCarrinho().click();
     
 
     //validar que o produto foi adicionado ao carrinho 
     HomePageAmazon.validarValorCarrinho(1);
-    PaginaProduto.obterMensagemDeValidação();
+    PaginaDetalheProduto.obterMensagemDeValidação();
   
 
     // finalizar a compra
@@ -43,8 +44,8 @@ describe('Aceder ao site da amazon', () => {
       //fazer pesquisa por produto inexistente
       const produtoInexistente = '123123142534534bnkmfbasdnmfb smnc smadfkjfnsdkf';
 
-      PesquisaProduto.pesquisaProduto(produtoInexistente);
-      PesquisaProduto.produtoinexistente(produtoInexistente);
+      PesquisaSelecaoProduto.pesquisarProduto(produtoInexistente);
+      PesquisaSelecaoProduto.produtoinexistente(produtoInexistente);
     })
 
   });
