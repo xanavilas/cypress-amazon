@@ -13,7 +13,8 @@ class FinalizarCompra {
         cy.get('.a-button-input').click();
         cy.get('#ap_password').type(password);
         cy.get('#signInSubmit').click();
-        //cy.get('[data-testid="creatable-sleeve-Card"]').find('svg').click();
+        cy.get('#navbar-main').contains('Secure checkout');
+
     }
 }
 
